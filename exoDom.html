@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exo Dom</title>
+</head>
+<body>
+    <div id="board" ></div>
+
+    <script>
+
+const box = document.createElement ("div")
+box.classList.add("box")
+
+const board = document.querySelector("#board")
+//board.appendChild(box)
+
+
+for (let i =1; i<=3; i++) {
+    const newbox = box.cloneNode ()
+    newbox.innerText = i
+    board.appendChild(newbox)
+
+    newbox.addEventListener("click", function () {
+        console.log("Boite n°" +i+",click !")
+        newbox.classList.toggle("box-clicked")
+        //toggle = va et vient 
+    
+        
+    })
+}
+
+//board.appendChild(newbox)pppppppppppjjj
+
+
+
+
+
+// test
+
+// différence entre innerText et TextContent :
+
+//  innertext va afficher l'intégralité des éléments qui composent ce que l'ont veut renvoyer/vérifier
+
+
+// alors que textContent va uniquement afficher ce qu'il y a entre les balises, donc si on veut aller a l'essentiel,
+
+// et par exemple afficher une chaine de caractère alors textContent sera plus approprié
+
+
+
+
+
+
+
+// lorque'on clique le carre devient un cercle et ca dezoom
+
+</script>
+    
+</body>
+</html>

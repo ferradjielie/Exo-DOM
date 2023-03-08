@@ -1,0 +1,28 @@
+#board {display: flex;
+flex-wrap: wrap;}
+
+.box {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 200px;
+height: 200px;
+border:1px solid black;
+border-radius: 10px;
+background-color: red;
+font-size: 5em;
+line-height: 75px;
+margin:8px;
+transition: 0.5s;
+cursor: pointer;
+
+}
+
+
+.box-clicked {
+background-color: green;
+border-radius: 10em;
+transform: scale(0.8); 
+
+}
+
