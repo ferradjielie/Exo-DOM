@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style2.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="board"></div>
+
+
+
+    </span>
+
+
+
+
+    <script>
+
+
+
+        const box = document.createElement('div')
+        const rs = document.createElement('span')
+        rs.classList.add("rs")
+        box.classList.add("box")
+
+        const board = document.querySelector("#board")
+
+        const colorTab = ["rgba(0, 17, 255, 0.837)", "rgb(0, 145, 255)", "rgb(255, 0, 111)"];
+
+        const contentTab = ['facebook', 'twitter', 'instagram'];
+
+
+
+
+        for (let i = 1; i <= 3; i++) {
+            const newBox = box.cloneNode()
+            const newRs = rs.cloneNode()
+            newRs.textContent = contentTab[i - 1]
+
+
+            newBox.style.backgroundColor = colorTab[i - 1]
+            
+            newBox.classList.add("fa-brands")
+            //newrs.classList.add("fa-brands")
+            newBox.classList.add("emoji")
+            
+            newBox.classList.add("fa-" + contentTab[i - 1])
+            
+            newBox.appendChild(newRs)
+            
+            board.appendChild(newBox)
+
+            newBox.addEventListener("click", function () {
+                console.log("Boite n°" + i + ",click !")
+                newBox.classList.toggle("box-clicked")
+                newRs.classList.toggle("rs-clicked")
+                newRs.classList.toggle("background-clicked")
+                //toggle = va et vient 
+
+
+            })
+        }
+
+
+    </script>
+
+</body>
+
+</html>

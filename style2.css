@@ -1,0 +1,72 @@
+#board {display: flex;
+    flex-wrap: wrap;}
+    /*body {background-color: rgba(0, 17, 255, 0.837); } 
+   body { background-color: rgba(0, 26, 255, 0.849);} 
+   body {background-color : rgb(255, 0, 111)} */
+
+
+ .box {   display: flex;
+justify-content: center;
+align-items: center;
+width: 200px;
+height: 200px;
+border:1px solid black;
+margin : 15px;
+position: relative;
+}
+
+  .emoji{
+    
+    
+    
+    
+    color : white;
+    font-size: 3em;
+}
+
+
+.fa-brands:before{
+
+    
+    transform: rotate(0);
+    translate: 0 0;
+    transition: 1s all;
+}
+
+.fa-brands{
+    content : "facebook"
+}
+.content{
+    opacity: 0;
+}
+
+.box-clicked:before{
+
+   
+    
+    transform: rotate(360deg) ; 
+    translate: 0 -20px;
+
+  
+    
+}
+
+.rs{
+    position: absolute !important;
+    left: 0 !important;
+    font-size: 0.5em !important; 
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+}
+
+.rs-clicked{
+
+}
+/* creer une nouvelle class pour changer opa rs de 0 à 1 et une autre pour que le background color change de color lors du click 
+et on mettre les deux dans la fonction addEventListener
+ 
+   
+    
+    
+
