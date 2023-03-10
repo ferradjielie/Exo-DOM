@@ -21,7 +21,7 @@ position: relative;
     
     
     color : white;
-    font-size: 3em;
+    font-size: 1.5em;
 }
 
 
@@ -61,8 +61,16 @@ position: relative;
 }
 
 .rs-clicked{
+    opacity: 1;
+    
 
 }
+
+.background-clicked {
+    background-color: rgba(0, 17, 255, 0.837)", "rgb(0, 145, 255)", "rgb(255, 0, 111);
+}
+
+body {  background-color: rgba(0, 17, 255, 0.837)", "rgb(0, 145, 255)", "rgb(255, 0, 111);}
 /* creer une nouvelle class pour changer opa rs de 0 à 1 et une autre pour que le background color change de color lors du click 
 et on mettre les deux dans la fonction addEventListener
  
