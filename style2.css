@@ -1,5 +1,13 @@
-#board {display: flex;
-    flex-wrap: wrap;}
+#board {
+    
+    display: flex;
+    /*flex-wrap: wrap; */
+     
+justify-content: center ;
+align-items: center;
+height: 100vh;
+
+}
     /*body {background-color: rgba(0, 17, 255, 0.837); } 
    body { background-color: rgba(0, 26, 255, 0.849);} 
    body {background-color : rgb(255, 0, 111)} */
@@ -10,10 +18,14 @@ justify-content: center;
 align-items: center;
 width: 200px;
 height: 200px;
-border:1px solid black;
+border:1px solid white;
 margin : 15px;
 position: relative;
+transition: 1s all;
+
+
 }
+body { background-color: grey;}
 
   .emoji{
     
@@ -46,9 +58,12 @@ position: relative;
     
     transform: rotate(360deg) ; 
     translate: 0 -20px;
+   
+}
 
-  
-    
+.box-radius {
+    border-radius: 14px;
+    transition: 1s all;
 }
 
 .rs{
@@ -62,15 +77,23 @@ position: relative;
 
 .rs-clicked{
     opacity: 1;
+    transition: 1s all;
+}
+
+.box-shadow {box-shadow  : 0px 10px 13px -10px black ;
     
-
+    transition : 1s all;
+     
 }
 
-.background-clicked {
-    background-color: rgba(0, 17, 255, 0.837)", "rgb(0, 145, 255)", "rgb(255, 0, 111);
-}
 
-body {  background-color: rgba(0, 17, 255, 0.837)", "rgb(0, 145, 255)", "rgb(255, 0, 111);}
+
+.back-change {
+    background-color: gray;
+}
+ h3 { position: absolute;
+    color: aliceblue;}
+
 /* creer une nouvelle class pour changer opa rs de 0 à 1 et une autre pour que le background color change de color lors du click 
 et on mettre les deux dans la fonction addEventListener
  

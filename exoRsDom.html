@@ -15,6 +15,8 @@
 <body>
     <div id="board"></div>
 
+    <h3>  Follow Us</h3>
+
 
 
     </span>
@@ -24,8 +26,8 @@
 
     <script>
 
-
-
+ 
+        const body= document.createElement("body")
         const box = document.createElement('div')
         const rs = document.createElement('span')
         rs.classList.add("rs")
@@ -41,6 +43,7 @@
 
 
         for (let i = 1; i <= 3; i++) {
+            const newBody= body.cloneNode()
             const newBox = box.cloneNode()
             const newRs = rs.cloneNode()
             newRs.textContent = contentTab[i - 1]
@@ -57,24 +60,30 @@
             newBox.appendChild(newRs)
             
             board.appendChild(newBox)
-
+            
             newBox.addEventListener("click", function () {
+                
+                var isClicked = newBox.classList.contains("box-clicked")
+                console.log(isClicked)
                 console.log("Boite n°" + i + ",click !")
                 newBox.classList.toggle("box-clicked")
+                newBox.classList.toggle ("box-shadow")
+                newBox.classList.toggle ("box-radius")
                 newRs.classList.toggle("rs-clicked")
-               
-                newbox.classList
-               
-              
-            
-                
-            
-                
-                //toggle = va et vient 
+                newBox.classList.toggle("body") 
+              document.body.style.backgroundColor =  colorTab [i-1]
 
+              if (isClicked == true) {
+                document.body.style.backgroundColor =  "gray"
+              } else { document.body.style.backgroundColor = colorTab [i-1] }
 
-            })
-        }
+               })
+
+               
+        
+             
+        
+            }
 
 
     </script>
